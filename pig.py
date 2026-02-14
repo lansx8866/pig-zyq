@@ -24,7 +24,7 @@ col1, col2 = st.columns(2)
 # YES按钮逻辑
 with col1:
     if st.button("yes", type="primary", use_container_width=True):
-        st.success("兔子")  # 显示提示文字
+        st.success("🐇🐇🐇")  # 显示提示文字
         # 显示小猪图片
         try:
             # 本地图片
@@ -42,4 +42,5 @@ with col2:
     if st.button("no", use_container_width=True):
 
         st.warning("请重新选择！")
+
 
