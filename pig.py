@@ -3,11 +3,11 @@ from PIL import Image
 import os
 
 # 页面基础设置
-st.set_page_config(page_title="趣味问答", page_icon="🐷", layout="centered")
+st.set_page_config(page_title="给宝宝写的python代码", page_icon="🐇", layout="centered")
 
 # 标题和问题
-st.title("🐷 趣味问答")
-st.subheader("郑雨晴是小猪吗？")
+st.title("🐇 ")
+st.subheader("郑雨晴是小兔子吗？")
 
 # ========== 关键：替换图片路径 ==========
 # 方式1：用你上传到Streamlit Cloud的本地图片（推荐）
@@ -24,13 +24,13 @@ col1, col2 = st.columns(2)
 # YES按钮逻辑
 with col1:
     if st.button("yes", type="primary", use_container_width=True):
-        st.success("🐷")  # 显示提示文字
+        st.success("兔子")  # 显示提示文字
         # 显示小猪图片
         try:
             # 本地图片
             if os.path.exists(IMG_PATH):
                 img = Image.open(IMG_PATH)
-                st.image(img, width=400, caption="小猪来啦～")
+                st.image(img, width=400, caption="小兔子来啦～")
             # 网络图片（如果用方式2，删掉上面的if，保留下面这行）
             # st.image(IMG_PATH, width=400, caption="小猪来啦～")
         except Exception as e:
@@ -42,3 +42,4 @@ with col2:
     if st.button("no", use_container_width=True):
 
         st.warning("请重新选择！")
+
